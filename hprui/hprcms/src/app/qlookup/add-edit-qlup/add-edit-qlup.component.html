@@ -1,0 +1,47 @@
+<div class="form-froup row">
+
+
+<label class="col-sm-2 col-form-label">questionType</label>
+<div class="col-sm-10">
+   <select class="form-control" [(ngModel)]="questionType">
+       <option>--Select--</option>
+       <option *ngFor="let questName of QuestionTypeList">
+           {{questName.questionTypeName}}
+       </option>
+   </select>
+</div>
+
+
+
+<label class="col-sm-2 col-form-label">Institution </label>
+<div class="col-sm-10">
+   <select class="form-control" [(ngModel)]="Institution">
+       <option>--Select--</option>
+       <option *ngFor="let instName of InstitutionList">
+           {{instName.InstitutionName}}
+       </option>
+   </select>
+</div>
+
+
+<label class="col-sm-2 col-form-label">question Description</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" [(ngModel)]="questionDescription"
+     placeholder="Enter Question Description">
+
+  </div>
+
+  <label class="col-sm-2 col-form-label">currentDateTime</label>
+  <div class="col-sm-10">
+    <input type="date" class="form-control" [(ngModel)]="currentDateTime">
+
+  </div>
+
+  </div>
+
+  <button  (click)="addQuestionLookup()"  class="btn btn-primary" >Add</button>
+
+
+
+  <button  (click)="updateQuestionLookup()"  class="btn btn-primary" >Update</button>
+

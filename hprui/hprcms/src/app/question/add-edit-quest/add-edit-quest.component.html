@@ -1,0 +1,21 @@
+<div class="form-froup row">
+  <label class="col-sm-2 col-form-label">QuestionTypeName</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" [(ngModel)]="questionTypeName"  placeholder="Enter questionType Name">
+</div>
+
+  <label class="col-sm-2 col-form-label">Description</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" [(ngModel)]="Description"  placeholder="Enter  Description">
+
+  </div>
+
+</div>
+<button (click)="addQuestion()" *ngIf="quest.questionTypeId==0" class="btn btn-primary">
+
+Add
+</button>
+
+<button (click)="updateQuestion()" *ngIf="quest.questionTypeId!=0" class="btn btn-primary">
+Update
+  </button>
